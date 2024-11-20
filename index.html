@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Download</title>
+    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+            color: white;
+            font-family: 'Covered By Your Grace', cursive;
+            height: 100vh;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        img {
+            max-width: 50%; /* Restrict width to 50% of the screen */
+            max-height: 50%; /* Restrict height to 50% of the screen */
+        }
+        .text-box {
+            width: 80%;
+            height: 50px;
+            background-color: black;
+            border: 2px solid white;
+            color: white;
+            font-size: 16px;
+            padding: 5px;
+            margin-top: 20px;
+        }
+        .enter-button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: black;
+            border: 2px solid white;
+            cursor: pointer;
+        }
+        .enter-button:hover {
+            background-color: white;
+            color: black;
+        }
+        audio {
+            display: none; /* Hides the audio element from view */
+        }
+    </style>
+</head>
+<body>
+    <h1>WHOEVER DARES TO OPEN THIS BOX, NOTHING GOOD WILL HAPPEN.</h1>
+    <img src="https://cdn.discordapp.com/attachments/1282358596817912009/1308759544335306794/Baslksz1629_20241120143745.png?ex=673f1cce&is=673dcb4e&hm=2b3e9f5e6f2739626872eae786c36d62e903bda3a0b52da001137b6bbe25b7e4" alt="Centered Image">
+    <textarea id="inputBox" class="text-box" placeholder="Enter your code"></textarea>
+    <button id="downloadButton" class="enter-button">Enter</button>
+    <audio id="backgroundMusic" autoplay loop>
+        <source src="https://cdn.discordapp.com/attachments/1282358596817912009/1308764035088519188/y2mate.com_-_Ten_Minutes_of_Static.mp3?ex=673f20fd&is=673dcf7d&hm=9ffbaebbc0da0925118db7868865275d0bc46666826eb9cb12606e767e4752a0&" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <script>
+        document.getElementById("downloadButton").addEventListener("click", function() {
+            const input = document.getElementById("inputBox").value.trim();
+            if (input === "HR_MF89") {
+                const link = document.createElement("a");
+                link.href = "https://cdn.discordapp.com/attachments/1282358596817912009/1308759544691691520/Baslksz1630_20241120144021.png?ex=673f1ccf&is=673dcb4f&hm=b5b9afc5ebf4b6379770c4ad90e80ef0c78114c1dbce9ce0ad5374e2f8a3cc41&";
+                link.download = "Unnamed1630.png"; // File name
+                link.click();
+            } else {
+                alert("Invalid code!");
+            }
+        });
+
+        // Adjust the volume to make the audio very quiet
+        const backgroundMusic = document.getElementById("backgroundMusic");
+        backgroundMusic.volume = 0.1; // Set volume to 10%
+    </script>
+</body>
+</html>
